@@ -1,4 +1,5 @@
-﻿using Huvermann.Extensions.DependencyInjection.ServiceFactories;
+﻿using Huvermann.Extensions.DependencyInjection.Abstractions.ServiceFactories;
+using Huvermann.Extensions.DependencyInjection.ServiceFactories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,15 @@ namespace Huvermann.Extensions.DependencyInjection
 
             serviceReg[interfaceKey] = call;
             return services;
+        }
+
+        public static void AddFactory<TService, TImplementation>(this IServiceCollection services)
+            where TService : class
+            where TImplementation : class, TService
+        {
+            services.AddTransient<TService, TImplementation>();
+            services.AddSingleton<Func<TService>>(x => () => x.GetService<TService>());
+            services.AddSingleton<IFactory<TService>, Factory<TService>>();
         }
     }
 }
