@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huvermann.Extensions.DependencyInjection", "Huvermann.Extensions.DependencyInjection\Huvermann.Extensions.DependencyInjection.csproj", "{6922276D-8631-42E9-A673-62835B995C8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huvermann.Extensions.DependencyInjection.Demo", "Huvermann.Extensions.DependencyInjection.Demo\Huvermann.Extensions.DependencyInjection.Demo.csproj", "{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6922276D-8631-42E9-A673-62835B995C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6922276D-8631-42E9-A673-62835B995C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6922276D-8631-42E9-A673-62835B995C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
