@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huvermann.Extensions.Depend
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huvermann.Extensions.DependencyInjection.Demo", "Huvermann.Extensions.DependencyInjection.Demo\Huvermann.Extensions.DependencyInjection.Demo.csproj", "{A5393B5A-CA3F-470C-8EB8-3F1794BCBFDA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CE21D07-F2DC-49AF-9EDE-9C33F647032D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
