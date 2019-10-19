@@ -2,9 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 
 namespace Huvermann.Extensions.DependencyInjection.Modularity
 {
@@ -37,8 +39,20 @@ namespace Huvermann.Extensions.DependencyInjection.Modularity
             return result;
         }
 
+        private static void LoadExternalPlugins()
+        {
+            var path = Thread.GetDomain().BaseDirectory;
+            string[] pluginFiles = Directory.GetFiles(path, "*.dll");
+
+            var allPlugins = pluginFiles.SelectMany(file => Assembly.LoadFile(file).GetExportedTypes())
+                .Where(type => typeof(IRegistrationModule).IsAssignableFrom(type))
+                .Select(t => (IRegistrationModule)Activator.CreateInstance(t))
+                .ToArray();
+        }
+
         public static void Configure(IServiceCollection services)
         {
+            LoadExternalPlugins();
             var moduleTypes = GetModules<IRegistrationModule>();
             var moduleInstances = CreateModulesFromTypes(moduleTypes);
             foreach (var module in moduleInstances)
