@@ -3,18 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Extends Microsoft Dependency Injection for registering and resolving interfaces by name.</Description>
+    <Description>Extends Microsoft Dependency Injection for registering and resolving interfaces by name.
+automatic registration of modules</Description>
     <Copyright>Huvermann software engineering GmbH</Copyright>
     <RepositoryType />
-    <PackageTags>DI, Dependency Injection, register by name, Factory</PackageTags>
+    <PackageTags>DI, Dependency Injection, register by name, Factory, Modularity</PackageTags>
     <Company>Huvermann software engineering GmbH</Company>
     <Authors>Heiko Huvermann</Authors>
     <PackageProjectUrl>https://github.com/huvermann/Extensions.DependencyInjection</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/huvermann/Extensions.DependencyInjection/blob/master/License.txt</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/huvermann/Extensions.DependencyInjection.git</RepositoryUrl>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.1</AssemblyVersion>
-    <FileVersion>1.0.1.1</FileVersion>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.1.2</AssemblyVersion>
+    <FileVersion>1.0.1.2</FileVersion>
+    <PackageReleaseNotes>New: Modularity</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

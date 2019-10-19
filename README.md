@@ -4,12 +4,61 @@ DI Factories
 
 #Example of service registration:
 
+Create a Startup where a Servicecollection is created.
+
+"AddNamedServiceRegistration": extents the servicecollection for Named Services
+"AddModularity": extends the servicecollection to use all IRegistrationModule for service registration
+
+
 ```csharp
-private IServiceCollection ConfigureServices(IServiceCollection services)
+ public class Startup
+    {
+        private readonly ServiceProvider _serviceProvider;
+
+        public Startup()
+        {
+            IServiceCollection services = new ServiceCollection();
+            ConfigureServices(services);
+            _serviceProvider = services.BuildServiceProvider();
+
+        }
+
+        private IServiceCollection ConfigureServices(IServiceCollection services)
         {
             // Add the extension
             services.AddNamedServiceRegistration();
 
+            // Add module registration
+            services.AddModularity();
+
+            
+            return services;
+        }
+
+        public void Start()
+        {
+            var mainRunner = _serviceProvider.GetService<MainRunner>();
+            mainRunner.Run();
+        }
+    }
+```
+#Use of IRegistrationModule
+
+Every class that implements IRegistrationModule is automatically used as service registration
+
+```csharp
+
+using Huvermann.Extensions.DependencyInjection.Abstractions.Modularity;
+using Huvermann.Extensions.DependencyInjection.Abstractions.ServiceFactories;
+using Huvermann.Extensions.DependencyInjection.ServiceFactories;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Huvermann.Extensions.DependencyInjection.Demo.Runner.Plugin
+{
+    public class PluginRegistration : IRegistrationModule
+    {
+        public void Configure(IServiceCollection services)
+        {
             // Add all plugins by name
             services.AddTransientByName<IPlugin, PluginA>("NameA");
             services.AddTransientByName<IPlugin, PluginB>("NameIsB");
@@ -21,11 +70,13 @@ private IServiceCollection ConfigureServices(IServiceCollection services)
             services.AddFactory<IFooService, Foo>();
             // The class, where all the stuff is used.
             services.AddTransient<MainRunner>();
-            return services;
         }
-```
+    }
+}
 
+```
 Example of usage:
+
 ```csharp
 public class MainRunner
     {

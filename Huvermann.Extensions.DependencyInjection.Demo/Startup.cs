@@ -23,17 +23,10 @@ namespace Huvermann.Extensions.DependencyInjection.Demo
             // Add the extension
             services.AddNamedServiceRegistration();
 
-            // Add all plugins by name
-            services.AddTransientByName<IPlugin, PluginA>("NameA");
-            services.AddTransientByName<IPlugin, PluginB>("NameIsB");
+            // Add module registration
+            services.AddModularity();
 
-            // Add a Factory for the plugin interface
-            services.AddTransient<IServiceByNameFactory<IPlugin>, ServiceByNameFactory<IPlugin>>();
-
-            // Add a foo service factory.
-            services.AddFactory<IFooService, Foo>();
-            // The class, where all the stuff is used.
-            services.AddTransient<MainRunner>();
+            
             return services;
         }
 
