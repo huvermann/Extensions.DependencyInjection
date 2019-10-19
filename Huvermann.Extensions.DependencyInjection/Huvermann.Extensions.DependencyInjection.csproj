@@ -9,6 +9,9 @@
     <PackageTags>DI, Dependency Injection, register by name, Factory</PackageTags>
     <Company>Huvermann software engineering GmbH</Company>
     <Authors>Heiko Huvermann &lt;hh@huvermann.com&gt;</Authors>
+    <PackageProjectUrl>https://github.com/huvermann/Extensions.DependencyInjection</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/huvermann/Extensions.DependencyInjection/blob/master/License.txt</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/huvermann/Extensions.DependencyInjection.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
