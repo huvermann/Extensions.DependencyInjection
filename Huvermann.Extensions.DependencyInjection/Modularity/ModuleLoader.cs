@@ -27,13 +27,19 @@ namespace Huvermann.Extensions.DependencyInjection.Modularity
 
         public static IEnumerable<Type> GetModules<TModule>()
         {
+            List<string> duplicates = new List<string>();
             List<Type> result = new List<Type>();
             var it = typeof(TModule);
             var allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             foreach (var assembly in allAssemblies)
             {
-                var moduleTypes = GetLoadableTypes(assembly).Where(x => !x.IsInterface && it.IsAssignableFrom(x));
-                result.AddRange(moduleTypes);
+                if (!duplicates.Contains(assembly.FullName))
+                {
+                    var moduleTypes = GetLoadableTypes(assembly).Where(x => !x.IsInterface && it.IsAssignableFrom(x));
+                    result.AddRange(moduleTypes);
+                    duplicates.Add(assembly.FullName);
+                }
+                    
             }
 
             return result;

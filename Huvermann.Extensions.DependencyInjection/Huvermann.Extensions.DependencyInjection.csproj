@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -13,9 +13,9 @@ automatic registration of modules</Description>
     <PackageProjectUrl>https://github.com/huvermann/Extensions.DependencyInjection</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/huvermann/Extensions.DependencyInjection/blob/master/License.txt</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/huvermann/Extensions.DependencyInjection.git</RepositoryUrl>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.1.2</AssemblyVersion>
-    <FileVersion>1.0.1.2</FileVersion>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.1.3</AssemblyVersion>
+    <FileVersion>1.0.1.3</FileVersion>
     <PackageReleaseNotes>New: Modularity</PackageReleaseNotes>
   </PropertyGroup>
 
