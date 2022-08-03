@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Huvermann.Extensions.DependencyInjection", "Huvermann.Extensions.DependencyInjection\Huvermann.Extensions.DependencyInjection.csproj", "{6922276D-8631-42E9-A673-62835B995C8F}"
 EndProject
@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferencedDemoLibrary", "ReferencedDemoLibrary\ReferencedDemoLibrary.csproj", "{385E1FC5-C431-421D-B0D2-44969DE95FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferencedDemoLibrary", "ReferencedDemoLibrary\ReferencedDemoLibrary.csproj", "{385E1FC5-C431-421D-B0D2-44969DE95FDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedServiceWebappDemo", "NamedServiceWebappDemo\NamedServiceWebappDemo.csproj", "{76C50392-6C29-4CB3-B9EF-8EEEFCB99F0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{385E1FC5-C431-421D-B0D2-44969DE95FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{385E1FC5-C431-421D-B0D2-44969DE95FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{385E1FC5-C431-421D-B0D2-44969DE95FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C50392-6C29-4CB3-B9EF-8EEEFCB99F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C50392-6C29-4CB3-B9EF-8EEEFCB99F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C50392-6C29-4CB3-B9EF-8EEEFCB99F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C50392-6C29-4CB3-B9EF-8EEEFCB99F0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

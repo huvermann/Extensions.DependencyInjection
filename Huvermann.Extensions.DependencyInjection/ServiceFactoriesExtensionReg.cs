@@ -9,7 +9,7 @@ namespace Huvermann.Extensions.DependencyInjection
     {
         public static IServiceCollection AddNamedServiceRegistration(this IServiceCollection services)
         {
-            services.AddScoped<INameRegistrationService, NameRegistrationService>();
+            services.AddTransient<INameRegistrationService, NameRegistrationService>();
             services.AddTransient<INamedServiceProvider, NamedServiceProvider>();
             return services;
         }
