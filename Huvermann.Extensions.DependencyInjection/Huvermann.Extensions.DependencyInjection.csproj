@@ -3,20 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Extends Microsoft Dependency Injection for registering and resolving interfaces by name.
+    <Description>Extends Microsoft Dependency Injection for registering and resolving interfaces/classes by name.
 automatic registration of modules</Description>
-    <Copyright>Huvermann software engineering GmbH</Copyright>
+    <Copyright>Huvermann Solutions GmbH</Copyright>
     <RepositoryType />
-    <PackageTags>DI, Dependency Injection, register by name, Factory, Modularity</PackageTags>
-    <Company>Huvermann software engineering GmbH</Company>
+    <PackageTags>DI, Dependency Injection, register by name, Factory, Modularity, named services</PackageTags>
+    <Company>Huvermann Solutions GmbH</Company>
     <Authors>Heiko Huvermann</Authors>
     <PackageProjectUrl>https://github.com/huvermann/Extensions.DependencyInjection</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/huvermann/Extensions.DependencyInjection/blob/master/License.txt</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryUrl>https://github.com/huvermann/Extensions.DependencyInjection.git</RepositoryUrl>
-    <Version>1.0.5</Version>
-    <AssemblyVersion>1.0.1.3</AssemblyVersion>
-    <FileVersion>1.0.1.3</FileVersion>
-    <PackageReleaseNotes>New: Modularity</PackageReleaseNotes>
+    <Version>1.0.6</Version>
+    <AssemblyVersion>1.0.6.0</AssemblyVersion>
+    <FileVersion>1.0.6.0</FileVersion>
+    <PackageReleaseNotes>New: Modularity
+Can be used now from singleton instances.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
